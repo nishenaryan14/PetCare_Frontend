@@ -36,7 +36,8 @@ const BreedList = () => {
       formData.append("climate", climate);
 
       const response = await axios.post(
-        `http://192.168.38.17:8000/add-favorite-pet/${user?.id}/`,
+        // `http://192.168.38.17:8000/add-favorite-pet/${user?.id}/`,
+        `https://petcare-backend-eu7a.onrender.com/add-favorite-pet/${user?.id}/`,
         formData,
         {
           headers: {
@@ -78,7 +79,8 @@ const BreedList = () => {
     const fetchBreeds = async () => {
       setLoading(true);
       try {
-        let url = `http://192.168.38.17:8000/suggest-breed/`;
+        // let url = `http://192.168.38.17:8000/suggest-breed/`;
+        let url = `http://localhost:8000/suggest-breed/`;
         let location = routerLocation || contextLocation;
 
         if (location) {
@@ -248,7 +250,8 @@ const BreedList = () => {
                       </AccordionSummary>
                       <AccordionDetails>
                         <Typography variant="body2">
-                          {breed.description || "No description available."}
+                          {/* {breed.description || "No description available."} */}
+                          No description available.
                         </Typography>
                       </AccordionDetails>
                     </Accordion>

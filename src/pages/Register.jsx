@@ -101,7 +101,8 @@ export default function Register() {
                 onSubmit={async (values, { setSubmitting }) => {
                   try {
                     const response = await axios.post(
-                      "http://192.168.38.17:8000/signup/",
+                      // "http://192.168.38.17:8000/signup/",
+                      "https://petcare-backend-eu7a.onrender.com/signup/",
                       {
                         name: values.name,
                         email: values.email,

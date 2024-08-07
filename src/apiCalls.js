@@ -6,7 +6,8 @@ export const fetchFavoritePets = async (userId) => {
   }
   try {
     const response = await axios.get(
-      `http://192.168.38.17:8000/favorite-pets/${userId}/`
+      // `http://192.168.38.17:8000/favorite-pets/${userId}/`
+      `https://petcare-backend-eu7a.onrender.com/favorite-pets/${userId}/`
     );
     return response.data;
   } catch (error) {

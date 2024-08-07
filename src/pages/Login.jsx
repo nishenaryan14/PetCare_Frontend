@@ -102,7 +102,8 @@ export default function Login() {
               onSubmit={async (values, { setSubmitting, setStatus }) => {
                 try {
                   const response = await axios.post(
-                    "http://192.168.38.17:8000/login/",
+                    // "http://192.168.38.17:8000/login/",
+                    "https://petcare-backend-eu7a.onrender.com/login/",
                     values
                   );
                   console.log("Login successful:", response.data);
