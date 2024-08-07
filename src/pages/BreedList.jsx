@@ -250,8 +250,7 @@ const BreedList = () => {
                       </AccordionSummary>
                       <AccordionDetails>
                         <Typography variant="body2">
-                          {/* {breed.description || "No description available."} */}
-                          No description available.
+                          {breed.description || "No description available."}
                         </Typography>
                       </AccordionDetails>
                     </Accordion>
