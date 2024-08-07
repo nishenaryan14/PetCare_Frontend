@@ -10,6 +10,7 @@ import BreedList from "./pages/BreedList";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import PrivateLayout from "./layouts/PrivateLayout";
 import Favourites from "./pages/Favourites";
+import Footer from "./components/Footer";
 
 const theme = createTheme({
   palette: {
@@ -73,6 +74,7 @@ function App() {
                   <PrivateLayout>
                     <Home />
                   </PrivateLayout>
+                  <Footer />
                 </AuthenticatedRoute>
               }
             />

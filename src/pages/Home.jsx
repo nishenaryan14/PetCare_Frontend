@@ -4,6 +4,11 @@ import { Container, Typography } from "@mui/material";
 import Hero from "../components/Hero/Hero";
 import CustomCarousel from "../components/Carousel";
 import ResponsiveAppBar from "../components/Navbar/Navbar";
+import Testimonials from "../components/Testimonials";
+import HowItWorks from "../components/HowItWorks";
+import Footer from "../components/Footer";
+import ContactCard from "../components/ContactCard";
+import FAQs from "../components/FAQs";
 
 const Home = () => {
   const theme = useTheme();
@@ -19,6 +24,10 @@ const Home = () => {
         Popular Services
       </Typography>
       <CustomCarousel deviceType={isMobile ? "mobile" : "desktop"} />
+      <Testimonials />
+      <HowItWorks />
+      <FAQs />
+      <ContactCard />
     </>
   );
 };
