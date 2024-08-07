@@ -80,7 +80,7 @@ const BreedList = () => {
       setLoading(true);
       try {
         // let url = `http://192.168.38.17:8000/suggest-breed/`;
-        let url = `http://localhost:8000/suggest-breed/`;
+        let url = `https://petcare-backend-eu7a.onrender.com/suggest-breed/`;
         let location = routerLocation || contextLocation;
 
         if (location) {
