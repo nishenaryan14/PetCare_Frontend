@@ -37,7 +37,7 @@ const BreedList = () => {
 
       const response = await axios.post(
         // `http://192.168.38.17:8000/add-favorite-pet/${user?.id}/`,
-        `https://petcare-backend-eu7a.onrender.com/add-favorite-pet/${user?.id}/`,
+        `https://petcare-backend-kp9t.onrender.com/add-favorite-pet/${user?.id}/`,
         formData,
         {
           headers: {
@@ -80,7 +80,7 @@ const BreedList = () => {
       setLoading(true);
       try {
         // let url = `http://192.168.38.17:8000/suggest-breed/`;
-        let url = `https://petcare-backend-eu7a.onrender.com/suggest-breed/`;
+        let url = `https://petcare-backend-kp9t.onrender.com/suggest-breed/`;
         let location = routerLocation || contextLocation;
 
         if (location) {
