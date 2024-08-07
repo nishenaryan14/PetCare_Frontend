@@ -11,27 +11,22 @@ import Carousel from "react-material-ui-carousel";
 
 const testimonials = [
   {
-    name: "John Doe",
+    name: "Alice Brown",
     testimonial:
-      "CareBuddy provided excellent care for my father. The service was professional and attentive, making a difficult time much easier.",
+      "This app helped me find the perfect pet for my family. The process was smooth and the information provided was very helpful.",
   },
   {
-    name: "Jane Smith",
+    name: "Bob Johnson",
     testimonial:
-      "Highly professional and compassionate service. The nurses were always on time and provided top-notch care with a personal touch.",
+      "I love how easy it is to find and favorite pets around my area. The personalized care tips are a great bonus!",
   },
 ];
 
 const Testimonials = () => {
   return (
-    <Container sx={{ py: 5 }}>
-      <Typography
-        variant="h4"
-        gutterBottom
-        align="center"
-        sx={{ fontWeight: "bold", mb: 4 }}
-      >
-        What Our Clients Say
+    <Container sx={{ py: 5, my: 10 }}>
+      <Typography variant="h4" gutterBottom align="center" sx={{ mb: 4 }}>
+        What Our Users Say
       </Typography>
       <Carousel
         autoPlay
@@ -66,7 +61,7 @@ const Testimonials = () => {
             <Divider />
             <Box sx={{ p: 2, textAlign: "center" }}>
               <Typography variant="body2" color="textSecondary">
-                — CareBuddy Client
+                — Pet App User
               </Typography>
             </Box>
           </Card>

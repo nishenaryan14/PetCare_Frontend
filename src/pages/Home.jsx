@@ -19,6 +19,8 @@ const Home = () => {
       <Hero />
       <Typography
         variant="h4"
+        gutterBottom
+        align="center"
         sx={{ color: theme.palette.secondary.main, margin: "26px 0" }}
       >
         Popular Services

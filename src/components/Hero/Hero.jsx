@@ -13,6 +13,9 @@ export default function Hero() {
         background: "#4F7942",
         position: "relative",
         overflow: "hidden",
+        width: "100vw", // Full viewport width
+        margin: 0, // Remove default margin
+        padding: 0, // Remove default padding
       }}
     >
       <img

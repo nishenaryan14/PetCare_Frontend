@@ -10,7 +10,7 @@ import {
 
 const ContactCard = () => {
   return (
-    <Container sx={{ py: 5 }}>
+    <Container sx={{ py: 5, my: 10 }}>
       <Typography variant="h4" gutterBottom align="center">
         Contact Us
       </Typography>

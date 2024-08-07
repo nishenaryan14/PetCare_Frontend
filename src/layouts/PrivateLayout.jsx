@@ -22,20 +22,23 @@ const PrivateLayout = ({ children }) => {
   }, []);
 
   return (
-    <div className="custom-scrollbar">
+    <>
       <ResponsiveAppBar showSearch={showSearch} />
       <Container
         disableGutters
         sx={{
           minHeight: "calc(100vh - 64px)",
-          width: "100vw",
+          width: "100vw", // Ensure full viewport width
+          // margin: 0,
+          overflowX: "hidden", // Prevent horizontal overflow
           padding: "77px 0",
+          boxSizing: "border-box", // Include padding and border in element's total width and height
         }}
       >
         {children}
         <Outlet />
       </Container>
-    </div>
+    </>
   );
 };
 

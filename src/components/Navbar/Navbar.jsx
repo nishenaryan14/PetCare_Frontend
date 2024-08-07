@@ -245,6 +245,7 @@ function ResponsiveAppBar({ showSearch }) {
                 <Tooltip title={user?.name || "User"} arrow>
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                     <Avatar
+                      sx={{ backgroundColor: "#001427" }}
                       alt={user?.name || "User Avatar"}
                       src={user?.avatar || "/default-avatar.png"}
                     />

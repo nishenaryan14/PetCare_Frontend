@@ -22,11 +22,12 @@ const Footer = () => {
               gutterBottom
               sx={{ fontWeight: "bold" }}
             >
-              CareBuddy
+              Pet Match
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8 }}>
-              Your trusted partner in home nursing care, offering compassionate
-              and professional services at your doorstep.
+              Helping you find the perfect pet in your area and offering
+              comprehensive care advice to ensure your pet's happiness and
+              health.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
@@ -83,7 +84,7 @@ const Footer = () => {
         <Divider sx={{ my: 4, borderColor: "#444" }} />
         <Box sx={{ textAlign: "center" }}>
           <Typography variant="body2" sx={{ opacity: 0.6 }}>
-            &copy; {new Date().getFullYear()} CareBuddy. All rights reserved.
+            &copy; {new Date().getFullYear()} Pet Match. All rights reserved.
           </Typography>
         </Box>
       </Container>

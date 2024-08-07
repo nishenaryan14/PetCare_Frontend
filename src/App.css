@@ -17,23 +17,28 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #696b69; /* Hover color of the scrollbar thumb */
 }
+
 #root {
   max-width: 100vw;
   overflow-x: hidden;
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 .carouselParent {
   height: 100%;
 }
+
 .heroimg {
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: top;
 }
+
 .heroInput {
   height: 46px;
   padding: 6px;
@@ -43,6 +48,7 @@
   border-bottom-left-radius: 7px;
   width: calc(100% - 46px);
 }
+
 .heroContent {
   position: absolute;
   top: 50%;

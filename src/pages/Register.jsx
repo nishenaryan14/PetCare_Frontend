@@ -102,7 +102,7 @@ export default function Register() {
                   try {
                     const response = await axios.post(
                       // "http://192.168.38.17:8000/signup/",
-                      "https://petcare-backend-eu7a.onrender.com/signup/",
+                      "https://petcare-backend-kp9t.onrender.com/signup/",
                       {
                         name: values.name,
                         email: values.email,
