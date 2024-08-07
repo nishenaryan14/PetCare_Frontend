@@ -19,7 +19,7 @@ export const fetchFavoritePets = async (userId) => {
 export const getCity = async (lat, lon) => {
   try {
     const response = await axios.get(
-      `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${API_Key}`
+      `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${API_Key}`
     );
     // console.log(response.data[0].name);
     return response.data[0].name;
