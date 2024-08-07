@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -16,6 +16,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { CircularProgress } from "@mui/material";
 
 const LazyImage = React.lazy(() => import("../components/LazyImage"));
 
@@ -41,6 +42,8 @@ const defaultTheme = createTheme();
 
 export default function Register() {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+
   const validationSchema = Yup.object({
     name: Yup.string().required("Name is required"),
     email: Yup.string()
@@ -99,6 +102,7 @@ export default function Register() {
                 }}
                 validationSchema={validationSchema}
                 onSubmit={async (values, { setSubmitting }) => {
+                  setIsLoading(true);
                   try {
                     const response = await axios.post(
                       // "http://192.168.38.17:8000/signup/",
@@ -114,11 +118,12 @@ export default function Register() {
                   } catch (error) {
                     console.error("Registration error:", error);
                   } finally {
+                    setIsLoading(false);
                     setSubmitting(false);
                   }
                 }}
               >
-                {({ errors, touched }) => (
+                {({ errors, touched, isSubmitting }) => (
                   <Form>
                     <Field
                       as={TextField}
@@ -183,9 +188,29 @@ export default function Register() {
                       type="submit"
                       fullWidth
                       variant="contained"
-                      sx={{ mt: 3, mb: 2 }}
+                      sx={{
+                        minHeight: "35px",
+                        mt: 3,
+                        mb: 2,
+                        position: "relative",
+                      }}
+                      disabled={isSubmitting}
                     >
-                      Sign Up
+                      {isSubmitting ? (
+                        <CircularProgress
+                          size={24}
+                          sx={{
+                            color: "blue",
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            marginTop: "-12px",
+                            marginLeft: "-12px",
+                          }}
+                        />
+                      ) : (
+                        "Sign Up"
+                      )}
                     </Button>
                     <Grid container>
                       <Grid item>

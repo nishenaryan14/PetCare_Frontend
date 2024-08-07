@@ -17,6 +17,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import CircularProgress from "@mui/material/CircularProgress"; // Import CircularProgress
 
 function Copyright(props) {
   return (
@@ -102,7 +103,6 @@ export default function Login() {
               onSubmit={async (values, { setSubmitting, setStatus }) => {
                 try {
                   const response = await axios.post(
-                    // "http://192.168.38.17:8000/login/",
                     "https://petcare-backend-kp9t.onrender.com/login/",
                     values
                   );
@@ -129,7 +129,7 @@ export default function Login() {
                 }
               }}
             >
-              {({ errors, touched, status }) => (
+              {({ errors, touched, status, isSubmitting }) => (
                 <Form>
                   <Field
                     as={TextField}
@@ -167,9 +167,29 @@ export default function Login() {
                     type="submit"
                     fullWidth
                     variant="contained"
-                    sx={{ mt: 3, mb: 2 }}
+                    sx={{
+                      minHeight: "35px",
+                      mt: 3,
+                      mb: 2,
+                      position: "relative",
+                    }}
+                    disabled={isSubmitting} // Disable the button while submitting
                   >
-                    Sign In
+                    {isSubmitting ? (
+                      <CircularProgress
+                        size={24}
+                        sx={{
+                          color: "blue",
+                          position: "absolute",
+                          top: "50%",
+                          left: "50%",
+                          marginTop: "-12px",
+                          marginLeft: "-12px",
+                        }}
+                      />
+                    ) : (
+                      "Sign In"
+                    )}
                   </Button>
                   {status?.error && (
                     <Typography color="error" align="center">
