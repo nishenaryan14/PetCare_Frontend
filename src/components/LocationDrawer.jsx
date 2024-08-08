@@ -16,7 +16,7 @@ import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 
 const API_KEY = "0baf619fe59b8580a66ba803f19cc246";
-const API_URL = "http://api.openweathermap.org/data/2.5/find";
+const API_URL = "https://api.openweathermap.org/data/2.5/find";
 
 export const LocationDrawer = ({
   setLocationDrawerOpen,
